@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="bikerView" destination="scr-Pz-Ohm" id="aLm-HU-8Cb"/>
+                <outlet property="pinchGesture" destination="XZf-dB-3nW" id="1TX-d7-QK1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biker" id="scr-Pz-Ohm">
+                    <rect key="frame" x="123" y="64" width="75" height="75"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="1RI-zV-l5b" appends="YES" id="atk-Tc-reS"/>
+                        <outletCollection property="gestureRecognizers" destination="zQq-FQ-omL" appends="YES" id="ac8-eh-nhn"/>
+                        <outletCollection property="gestureRecognizers" destination="Hbh-jE-IPO" appends="YES" id="LZl-PA-AtV"/>
+                        <outletCollection property="gestureRecognizers" destination="XZf-dB-3nW" appends="YES" id="4nI-Ru-3p8"/>
+                        <outletCollection property="gestureRecognizers" destination="laY-0P-KpC" appends="YES" id="LTE-cG-vCI"/>
+                    </connections>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rcY-GX-hBL">
+                    <rect key="frame" x="101" y="501" width="118" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Pity the Fool!">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onGo:" destination="-1" eventType="touchUpInside" id="Raw-bC-A5y"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="353" y="314"/>
+        </view>
+        <tapGestureRecognizer id="1RI-zV-l5b">
+            <connections>
+                <action selector="onTapGesture:" destination="-1" id="bGL-My-28J"/>
+            </connections>
+        </tapGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="zQq-FQ-omL">
+            <connections>
+                <action selector="onSwipe:" destination="-1" id="Ozm-nY-taB"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="Hbh-jE-IPO">
+            <connections>
+                <action selector="onLongPress:" destination="-1" id="ZV4-q4-i5M"/>
+            </connections>
+        </pongPressGestureRecognizer>
+        <pinchGestureRecognizer id="XZf-dB-3nW">
+            <connections>
+                <action selector="onPinchGesture:" destination="-1" id="TMH-t3-Fzr"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <rotationGestureRecognizer id="laY-0P-KpC">
+            <connections>
+                <action selector="onRotateGesture:" destination="-1" id="zRu-Us-KAp"/>
+            </connections>
+        </rotationGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="biker" width="600" height="600"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
