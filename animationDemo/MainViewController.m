@@ -56,7 +56,6 @@
     
     if (sender.state == UIGestureRecognizerStateBegan) {
         NSLog(@"gesture began");
-        CGPoint offset = [sender locationInView:sender.view];
         [UIView animateWithDuration:0.2 animations:^{
             self.bikerView.transform = CGAffineTransformMakeScale(1.2, 1.2);
         }];
